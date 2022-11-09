@@ -1,0 +1,100 @@
+CISCO 
+
+UNIDAD 1.5.5
+
+1. Enumere las categorias de los dispositivos intermediarios
+
+Routers
+Switches
+Hubs
+Wireless Devices
+Security
+Wan Emulation
+
+2. Sin ingresar en la nube de Internet o intranet Cuantos iconos de la topologia representan dispositivos terminales?
+
+1 CentralServer
+2 PC1
+3 PC2
+4 PC3
+5 PC4
+6 Sales
+7 Accounting
+8 Guest
+9 SmartPhone
+10 Laser
+11 Branch Server
+12 Tablet
+13 Home Laptop
+14 Home Desktop
+15 inkjet
+
+3. Sin contar las dos nubes Cuantos iconos de la topologia representan dispositivos intermedios.
+
+11
+
+4. Cuantos terminales no son PC de escritorio
+
+1 CentralServer
+2 Guest
+3 SmartPhone
+4 Laser
+5 Branch Server
+6 Tablet
+7 Home Laptop
+8 inkjet
+
+5. Cuantos tipos diferentes de conexiones de medios se utilizan en esta topologia de red
+
+1 Coaxial
+2 Cobre directo
+3 Serial DTE
+4 Wireless
+
+6. En Packet Tracer, solo el dispositivo Server-PT puede funcionar como servidor. Las PC de escritorio o portátiles no pueden funcionar como servidores. Según lo que estudió hasta ahora, explique el modelo cliente-servidor.
+
+El modelo comprende dos partes el Cliente que es la parte que interactua o solicita la informacion y el Servidor que es el que provee esta informacion. De igual forma cuando se habla de estos no se tiene que referir especificamente a un dispositivo como tal, pero mas bien al rol que representan, dado que en definitiva son ambos capaces de realizar la funciona del otro si son configurados de forma correcta. 
+
+7. Enumere, al menos, dos funciones de los dispositivos intermediarios.
+
+Notificar a otros dispositivos los errores y fallas de comunicacion.
+Clasificar y dirigir los mensajes segun las prioridades de caliadad del servicio.
+
+8. Enumere, al menos, dos criterios para elegir un tipo de medio de red.
+
+La cantidad de datos y la velocidad a la que se debe transmitir.
+La distancia en la cual el medio puede transportar exitosamente una senal.
+
+9. Explique la diferencia entre una LAN y una WAN, y dé ejemplos de cada una.
+
+Las redes LAN se utilizan para establecer acceso a usuarios dentro de una red geografica pequena como puede ser una pequena oficina o un departamento.
+Las redes WAN son caracter mucho mas amplio con una extension de varios kilometros estas no necesariamente tiene que ser particular pero pueden serlo como son las redes internas de una empresa muy grande con varias sucursales o a nivel mas publico que seria una ciudad o un distrito.
+
+10. Cuántas WAN ve en la red de Packet Tracer?
+
+WAN de internet
+WAN nivel intranet empresarial
+
+11. Cuántas LAN ve?
+
+1 Central
+2 Branch
+3 Home Office
+
+12. En esta red de Packet Tracer, Internet está simplificada en gran medida y no representa ni la estructura ni la forma de Internet propiamente dicha. Describa Internet brevemente.
+
+Internet es una red global de interconexiones que permite a los usuarios acceder a informacion de forma masiva.
+
+13. Cuáles son algunas de las formas más comunes que utiliza un usuario doméstico para conectarse a Internet?
+
+Cable que puede ser de distintos materiales
+Dial-Up
+Datos moviles
+Satelital
+
+14. Cuáles son algunos de los métodos más comunes que utilizan las empresas para conectarse a Internet en su área?
+
+Lineas dedicadas, Metro-E, satelite.
+
+
+
