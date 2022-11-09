@@ -1,0 +1,31 @@
+ESTANDARIZACION
+
+--PROTOCOLOS PROPIETARIOS--
+
+Protocolos disenados por las empresas para su uso propio, a raiz de esto fue necesario crear protocolos estandar para poder establecer una compatibilidad entre 
+los protocolos de las empresas.
+
+--PRINCIPALES ORGANIZACIONES DE ESTANDARES--
+
+ISO (International Standarization Organization) es una organizacion internacional de estandarizacion compuesta por 160 organizaciones 
+(ANSI(American National Standars Institute), DIN(Deutsches Institut fuer Normung), BSI(British Standard Institute), AFNOR(Association Francaise de Normalisation)
+, AENOR) aqui los paises miembros proponen nuevos estandares que luego pasan por una serie de votaciones para determinar si sera adoptado o no.
+
+ITU-T (International Union-Telecommunications Sector) antiguamente conocida como CCITT, consta de muchos miembros los cuales pueden ser paises o proveedores 
+privados, estos denominan recomendaciones que por lo general son utilizadas. Ejemplo X.34 V.53
+
+ISOC (Internet Society) aprueba todo lo relacionado con el Internet.
+
+IEEE (Institute of Electrical and Electronics Engineers) Ethernet fue definido por esta organizacion la cual esta compuesta por profesionales del sector.
+
+--TIPOS DE ESTANDARES--
+
+Existen dos tipos de facto (son de caracter progresivo se va adoptando, estandares de industria) y de jure (son de caracter colectivo por varias empresas 
+en su aplicacion).
+
+--ESTANDARIZACION EN INTERNET--
+
+El proceso de normalizacion es el siguiente primeramente se tiene que publicar en un RFC y tiene que despertar interes en la comunidad, posteriormente se obtiene
+una implementacion funcional la cual debe ser probado por dos organizaciones independientes. Cuando el IAB da su aprobacion el RFC pasa a ser un estandar de intenet(STD)
+
+Los Numeros STD pueden referencias multiples RFC esto debido a que pueden referenciar

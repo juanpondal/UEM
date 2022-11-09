@@ -1,0 +1,140 @@
+MODELOS DE REFERENCIA
+
+--MENSAJES SEGMENTACION Y MULTIPLEXION--
+
+Segmentacion: Los mensajes enviados son fragmentados y enviadosde forma independiente de forma que estos no monopolicen el canal de comunicacion y no genere 
+              cuellos de botella que pueden causar que los mensajes llegan mal o que no se envie la informacion correcta ademas de crear largas colas de envio. 
+
+Reemsamblado: se les asigna un numero de secuencia a los fragmentos para que al momento de ser recibidos por le receptor este sea capas de organizarlos y dar
+              el mensaje completo.
+
+--MODELO EN CAPAS--
+
+Requiere de un trabajo de alto nivel y una perfecta coordinacion entre el hardware y el software.
+
+Funcionalidades a resolver por el software:
+
+1- Direccionamiento de paquetes
+2- Control y deteccion de errores controla el flujo de los fragmentos para que se puedan procesar de forma correcta.
+3- Realizar la fragmentacion y el reensamblado 
+4- Evitar situacion de trafico en los canales de comunicacion empleados ademas de habilitar rutas alternas de comunicacion para que se pueda reestablecer la 
+   comunicacion.
+
+La forma de resolver estos problemas es en fraccionarlos esto es lo que se conoce como capas.
+
+Cada capa cumple una funcion en particular durante el proceso en forma de cadena, la capa es usuaria de la inferior y la que suple a la superior.
+
+El emisor genera el mensaje en la capa mas alta y esta pasa por las demas fragmentandose COMUNICACION VERTICAL REAL
+
+Estos mensajes ademas deben de contar con instruccion e informacion particular de control a cada mensaje estos datos son conocidos como PDU (Protocol Data Unit)
+COMUNICACION HORIZONTAL REAL
+
+Entre cada capa tenemos la interfaz que es la que nos provee del punto de acceso al servicio, lugar fisico donde se lleva el intercambio de informacion.
+
+CAPA 4 ----- PROTOCOLO ------- CAPA 4
+    |                            |
+    |         INTERFAZ           |
+    |                            |
+CAPA 3 ----- PROTOCOLO ------- CAPA 3
+    |                            |
+    |         INTERFAZ           |
+    |                            |
+CAPA 2 ----- PROTOCOLO ------- CAPA 2
+    |                            |
+    |         INTERFAZ           |
+    |                            |
+CAPA 1 ----- PROTOCOLO ------- CAPA 1
+
+--VENTAJAS DEL USO DEL MODELO DE CAPAS--
+
+Define una terminologia comun
+Permite la evolucion de una capa independiente
+Los proveedores trabajan bajo la misma metodologia por lo que fomenta la competencia en el mercado
+Facilita el diseno del protocolo y la posterior implantacion 
+
+--APARICION DEL MODELO OSI--
+
+Existen dos modelos el modelo OSI y el TCP/IP 
+
+Al principio las companias desarrollaban sus propios protocolos internos que causaron que existieran econsistemas de ordenadores aislados sin poder intercambiar 
+informacion fuera de su propio protocolo al estos no ser compatibles.
+
+A mediados de los 80 ISO(International Stadarisation Organization) intervino para poder desarrollar un protocolo general que paso a ser OSI(Open System Interconnection)
+
+--CAPAS OSI--
+
+CAPA 7 APLICACION(APDU): Proporciona servicios al usuario
+CAPA 6 PRESENTACION(PPDU): Proporciona informacion sobre el formato de la codificacion de datos a la capa aplicacion.
+CAPA 5 SESION(SPDU): Establece una sesion mediante la cual se hara el intercambio de datos
+CAPA 4 TRANSPORTE(TPDU): Realiza la fragmentacion del mensaje y el reensamblado en el destino, realiza el control del flujo de datos.
+CAPA 3 RED(paquete): Crea los paquetes para lo que podria ser necesario una nueva fragmentacion, asigna direccion para identificar el host de destino y el receptor
+CAPA 2 ENLACE(trama): Realiza el control de los errores y el flujo punto a punto, se asegura de que se reciba el mensaje y de que el receptor es capas de procesar 
+                      el mensaje
+CAPA 1 FISICA(bit): Encargada del transporte a nivel de bits, define medios fisicos como el voltaje del bit la duracion del mismo y su funcion.
+
+En el proceso de intercambio de informacion esta pasara por varios puntos intermerdios por los que solo se procesan las capas mas bajas ya que las capas superiores estan
+reservadas para el receptor que es el que interesa que procese el mensaje en su totalidad.
+
+--CAPAS TCP/IP--
+
+APLICACION: Representa los datos para el usuario, realiza el control del dialogo y de la codificacion. Contiene protocolos de alto nivel TELNET, FTP, SMTP, DNS, 
+            NNTP, HTTP
+
+TRANSPORTE: Permite la comunicacion entre los dos puntos en distintas redes.
+            TCP: Control de errores, divide y ensambla los datos, incluye la secuenciacion de los mismos, realiza el control de flujo. Orientado a conexion
+                 eficiente y sin errores por lo que es mas rapido.
+            UDP: Se utiliza en aplicaciones con poco flujo y en los que el tiempo de transmision es critico.
+
+INTERNET: Define un formato de paquete y un protocolo denominado IP, se encarga del enrutamiento, del direccionamiento y control de congestion.
+
+ACCESO A RED: Permite la conexion al nodo de red y permite enviar paquetes IP entre dos dispositivos, existen varios protocolos como ETHERNET para poder establecer 
+              la conexion.
+
+--COMPARACION DE LOS MODELOS--
+
+OSI                     TCP/IP
+
+APLICACION
+PRESENTACION            APLICACION
+SESION
+
+TRANSPORTE              TRANSPORTE
+
+RED                     INTERNET
+
+ENLACE                  ACCESO A RED
+FISICA
+
+SEMEJANZAS
+
+En ambos la casos la comunicacion se establece en la capa TRANSPORTE
+Ambas cuentan con una capa aplicacion, transporte y red
+
+DIFERENCIAS
+
+OSI fue un marco teorico del cual basar el protocolo buscando la estandarizacion de protocolos mientras que TCP/IP es una pila de protocolos. Es decir ademas de definir
+un marco teorico este tambien define los protocolos disenados para cada capa, estas se deben de tomar en cuenta a la hora de la implementacion en la aplicacion del usuario.
+
+OSI oculta los protocolos mejor que TCP/IP
+
+OSI primero se definieron las capas y posteriormente los protocolos por lo que no van de la mano al contrario de TCP/IP
+
+OSI la capa red ofrece un servicio que puede o no ser orientando a la conexion mientras que esto no ocurre en TCP/IP la capa red solo ofrece un servicio no orientado a la conexion es en la capa transporte donde se puede elegir entre si se quiere que este orientado o no a la conexion.
+
+--PDUS y encapsulacion--
+
+Encapsulacion es el proceso mediante el cual el contenido generado por el usuario se va transformando a medida que baja por las capas. En cada salto de capa se genera una PDU con los datos de la capa superior mas un encabezado con la informacion correspondiente a esa capa.
+
+DATOS WEB                                                                                                                   APLICACION
+ENCABEZADO DE LA CAPA DE TRANSPORTE - DATOS WEB                                                                             TRANSPORTE
+ENCABEZADO DE LA CAPA DE RED - ENCABEZADO DE LA CAPA DE TRANSPORTE - DATOS WEB                                              INTERNET
+ENCABEZADO DE LA CAPA DE LA TRAMA - ENCABEZADO DE LA CAPA DE RED - ENCABEZADO DE LA CAPA DE TRANSPORTE - DATOS WEB          ACCESO A RED
+
+--DIRECCIONAMIENTO DE RED--
+
+DIRECCION FISICA o MAC A NIVEL DE ACCESO DE RED Identifica el dispositivo a nivel fisico esta informacion es solo usada a nivel local ya que la conexion establecida con el receptor se realiza mediante una direccion.
+
+DIRECCION LOGICA IP A NIVEL DE RED Estas permiten identicar el dispositivo y la red de la que provienen. Para evitar situaciones de duplicidad existe una organizacion mundial ICANN(Internet Corporation for ASSIGNED NAMES and NUMBERS) que asigna rangos de ips a organizaciones que las solicitan. Las ips no varian en el recorrido.
+
+PUERTO A NIVEL DE TRANSPORTE Con la direccion IP identificamos el dispositivo final que recibe la informacion. Es aqui donde entra la importancia del puerto debido a que si existen multiples comunicaciones es el puerto es que sabe a que aplicacion enviar la informacion. 
+

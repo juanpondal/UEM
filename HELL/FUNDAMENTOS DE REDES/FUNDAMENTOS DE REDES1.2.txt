@@ -1,0 +1,81 @@
+HARDWARE DE RED
+
+--ELEMENTOS HARDWARE DE UNA RED DE ORDENADORES--
+
+-Compuesta por elementos hardware y software
+
+Elementos graficos
+
+Portatil - Ordenador 
+Cilindro - Router
+Conexion Rayo - Conexion WAN
+Conexion con esquinas - Switch dispositivos de conexion local
+Linea Recta - Medio Local
+Nube - Internet
+Cajita - Servidores
+
+--TERMINOLOGIA--
+
+Tarjeta de Red o Tarjeta NIC(Network Interface Card): Tarjeta que va conectada al motherboard para permitir conexion a la red, estas contienen una direccion MAC 
+                                                      , principalmente se utilizan con una conexion Ethernet con un cable RJ45.
+
+Interfaces: Son las tarjetas de red especializadas para los routers, tambien poseen una direccion MAC unica.
+
+Puertos: son los enchufes o conectores que dispone el dispositivo 
+
+--DISPOSITIVOS FINALES--
+
+Los elementos se dividen principalmente en dispositivos y medios de transmision.
+
+Los dispositivos finales son los receptores del mensaje son lo que reciben y procesan. Estos pueden ser PCs, Laptops, Moviles etc... Estos dispositivos disponene de una direccion unica local con la que se les identifica IP y una direccion fisica MAC.
+
+--DISPOSITIVOS INTERMEDIOS--
+
+Se utilizan como puente para interconectar a los hosts.
+
+Repetidores: Se encargan de amplificar la senal que se envia desde un router para poder extender el alcance de la conexion.
+
+Concentradores: Los hubs permiten una difusion de informacion mas general al poder enviar la informacion a varios dispositivos a traves de toda la red.
+
+Switches: En caso de los Switches la conexion esta ligada a una direccion el mensaje solo puede ser enviado a esa direccion en especifico y a ningun otro dispositivo.
+
+Routers: Permiten la interconexion de redes permitiendo asi la comunicacion mas amplia, este es capas de conocer las interfaces necesarias para poder interactuar 
+         con otras redes. Esto implica el poder conectarse con redes con las que no tiene una conexion fisica
+
+--MEDIOS--
+
+CABLEADO: Cables de Cobre (UTP CAT 5) se codifica la informacion a traves de una red electrica, tiene la desventaja de que pierde fuerza a medida de la longitud 
+          del cableado por lo que genera un peor servicio este ademas tiene un capacidad de transmision reducida debido al material empleado.  
+          Fibra Optica transmite a traves de senales de luz la informacion haciendo que el envio sea rapido y eficiente.
+
+INALAMBRICO: Se realiza la codificacion de informacion en ondas de radiofrecuencia.
+
+--CONEXION A INTERNET--
+
+//Redes de conexion al usuario companias pequenas
+
+Conexion por fibra: uso exclusivo de fibra
+Conexion por cable: Se recibe por un cable coaxial que contiene internet y television posteriomente se transforma en un cablemodem que es el que se conecta al PC
+Conexion por DSL: Consta de 3 canales uno de entrada uno de salida y uno de telefonia permite la recepcion de datos y telefonia servicio de companias 
+                  telefonicas especial.
+Conexion Movil: Conexion a traves de red movil
+Conexion por Satelite: Se requiere de una antena parabolica para poder establecer conexion el el ISP
+Conexion por Linea Conmutada: Tecnologia antigua en la que no se puede recibir datos y telefonia simultaneamente antiguo internet Windows Vista
+
+//Redes de grandes Organizaciones
+
+Lineas Dedicadas: Son lineas de servicio directo con el proovedor servicio punto a punto
+DSL: Suele ser en casos empresariales velocidades iguales para subida y bajada
+Metro Ethernet: Lineas de Cobre o Fibra que conectan con los proovedores de servicios.
+Satelite: Conexion a traves de antena y satelite con el ISP 
+
+--Arquitectura de Red--
+
+Caracteristicas
+
+Tolerancia a fallos: Cuando se produce un fallo tiene que afectar al menos numero de usuarios posible y recuperarse rapidamente esto depende de la velocidad con la 
+                     que se pueda buscar una ruta alterna para poder enviar la informacion.
+Escalabilidad: Permite anadir nuevos usuarios sin afectar el rendimiento de la red.
+Calidad de Servicio QoS: Permite que los routers prioriticen los paquetes segun el tipo de aplicacion a la que pertenece el trafico. Netflix > Wikipedia
+Seguridad: Hay que proteger tanto la infraestructura como la informacion. La proteccion de la Infraestructura es fisica y la informacion se protege con 
+           accesos controlados.

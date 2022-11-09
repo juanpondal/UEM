@@ -1,0 +1,105 @@
+FUNDAMENTOS DE REDES
+
+UNIDAD 1 INTRODUCCION
+
+IMPORTANCIA DE LAS REDES
+
+Usos principales 
+
+-Aprendizaje  o tambien Blended Learning mezcla de online y presencial
+-Trabajo
+
+HERRAMIENTAS PARA EL USO DE LAS REDES
+
+-Chat (Mensajeria Instantanea) IM
+-Blogs
+-Wikis
+-podcasting
+
+PROCESO DE LA COMUNICACION
+
+Proceso por el cual se transmite informacion por un canal entre un emisor y un receptor mediante una serie de reglas.
+
+PROTOCOLO
+
+Para que un emisor y un receptor puedan intercambiar informacion es necesario que ambos cumplan las reglas del canal
+
+APLICACIONES, SERVICIOS Y PROTOCOLOS
+
+Outlook SMTP(Simple Mail Transfer Protocol) - POP(POST OFFICE PROTOCOL) - IMAP(INTERNET MESSAGE ACCESS PROTOCOL)
+CHROME HTTP(HyperText Transfer Protocol) HTTPS(HYperText Transfer Secure Protocol)
+FileZilla FTP(File Transfer Protocol)
+
+CLASIFICACION DE REDES
+
+                                                TECNOLOGIA DE   --CONMUTACION DE CIRCUITOS
+                                                CONMUTACION     --CONMUTACION DE PAQUETES
+
+        REDES DE         SE CLASIFICAN EN       TECNOLOGIA DE   --BROADCAST
+        ORDENADORES                             TRANSMISION     --PUNTO A PUNTO
+
+                                                                --LAN
+                                                ALCANCE         --WAN
+                                                                --INTERREDES
+
+-REDES DE CONMUTACION DE CIRCUITOS: Principalmente usada en telefonia se utiliza creando un circuito cerrado entre las dos personas y el intermidiario que es 
+                                    la compania telefonica. Se establece una conexion inicial del llamador que conecta con el proovedor y establece la conversacion con el llamado. Se establece la conexion se realiza el intercambio de informacion y se desconcta.
+
+-REDES DE CONMUTACION DE PAQUETES:  Se realiza un envio fragmentado de un mensaje es partes a las que se le llama paquete estos paquetes contienen la direccion destino 
+                                    , el mensaje al que pertenece y el numero de secuencia que es el identificar de la parte del mensaje que se envia. Posteriormente los paquetes son recopilas y ordenados para conformar el mensaje original. Estos paquetes son enviado individualmente.
+
+-REDES BROADCAST:   Son redes con un canal compartido por lo que se envia un mensaje en mas a una red de ordenadores y el es el ordenador receptor el que identifica 
+                    que el mensaje esta dirigio para el y lo acepta.
+
+-REDES PUNTO A PUNTO:   Se realiza un envio del mensaje entre dos dispositivos, pero no significa que sean solo dos pueden ser mas de uno pero esto ira en cadena hasta 
+                        llegar al punto final. Por lo que se el canal de comunicacion es atraves de varios dispositivos hasta llegar a su destino final.
+
+-REDES LAN: Es un conexion local (Local Area Network) es un red prinvida limitada a areas pequenas refiriendose a el edificio de una empresa. Es similar a la red 
+            broadcast partiendo del hecho de que todo esta conectado a una red local a traves de switches.
+
+-REDES WAN: Redes de area amplia (Wide Area Network), nivel paises o continentes utiliza una metodologia similar a la de Punto a punto dado que la informacion salta
+            de routers a conmutadores hasta llegar al destino. Esto siendo gestionado por un Telecomunication Service Provider (TSP). Estas conexiones puedes ser ya atraves de cables o de satelite.
+
+-INTERREDES(INTERNET):  Coleccion Mundial de LANs a traves de WANs
+
+COMPARATIVA ENTRE CONMUTACION DE CIRCUITOS Y DE PAQUETES
+
+--1--
+C Se reserva un circuito entre emisor y receptor aunque no se transmita informacion
+P No se reserva ninguna ruta para intercambiar informacion tan pronto se finalice el intercambio esta ruta puede ser usada nuevamente para otro intercambio.
+
+--2--
+C Se establece un camino fijo. La ruta es siempre la misma. En caso de fallo la comunicacion es interrumpida.
+P La ruta es variable en caso de que falle la comunicacion por una ruta determinada se busca otra ruta para mantener el traslado de informacion
+
+--3--
+C Cuando existe una sobrecarga del canal de comunicacion no es posible establecer conexion
+P Cuando exuste una sobrecarga del canal de comunicacion se relentisa el proceso pero no se deja de dar servicio
+
+--4--
+C No es necesario direccionamiento
+P Es necessario tener la direccion a la que sera enviados los paquetes y de donde son enviados
+
+--5-- 
+C Canal dedicado a una sola comunicacion
+P El canal es utilizado por paquetes de distintas comunicaciones 
+
+HISTORIA DEL INTERNET
+
+1969 ARPANET proyecto militar de conexion entre ordenadores en caso de un ataque
+1974 Introduccion de TCP/IP (Transmission Control Protocol, Internet Protocol)
+1984 NSF(National Science Foundation) creo la NSFNET abierta a las universidades, el cual interconectaba con ARPANET este sistema fue adoptado por otros paises 
+     asi creando internet
+1990 ARPANET desaparecio y NSFNET paso a la empresa ANS(Advanced Networks and Services) Nace la WWW(World Wide Web) Tim Berners Lee del CERN(Centro Nacional 
+     de Investigacion Nuclear).
+1993 Primer Navegador Mosaic Marc Andreesen hasta evolucionar a NETSCAPE
+1995 ANSET fue vendida a America Online que posteriomente se fucionaria en el 2000 con Time Warner
+Finales de 90 Se popularizan buscadores que no solo buscaban por titulo pero tambien por contenido Yahoo! y AltaVista fundados en 1995
+2001 Se incorpora masivamente el uso de Google para buscar por relevancia
+2002 Aparecen redes soliales para poder conectar con personas como MySpace y Xing que se popularizo en 2004
+2004 Aparece la Web 2 con la llegada de paginas colaborativas en los que los usuario pueden modificar las paginas subiendo su contenido como YouTube y 
+     Wikipedia, dejando atras a las paginas estatica con contenido editado por las empresas duenas de las mismas.
+2006 Aparecen redes sociales como Facebook y Twitter 
+
+
+

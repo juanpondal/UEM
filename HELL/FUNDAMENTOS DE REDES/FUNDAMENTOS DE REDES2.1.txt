@@ -1,0 +1,113 @@
+CAPA FISICA
+
+--FUNCIONES DE LA CAPA FISICA--
+
+Lo que deben buscar los protocolos fisicos es lo siguiente:
+
+Propiedad fisica y electrica del medio: definir cual sera el medio fisico a utilizar
+
+Propiedades Mecanicas de los conectores: Se debe definir que tipo de conectores se utilizaran y como son sus materiales dimensiones y diagramas de pines
+
+Indicar como se condifican los bits en la senal de datos: esto consta de dos transformaciones, obtener una secuencia de bits con mejores caracteristicas para la transmicion (codificacion) y transformar la secuencia en una senal transportable por el medio usado(senalizacion).
+
+--Proceso de Senalizacion--
+
+Es el proceso que permite presentar una secuencia de bits en la senal fisica correspondiente al medio que se esta utilizando. El ejemplo mal simple seria un 0 que representa la ausencia de senal y un 1 que la presenta.
+
+De esta forma somos capaces de detectar cambios en las senales que se nos envian asi podemos recibir la informacion mediante estos cambios. Al mismo tiempo es importa que esto este contemplado dado que si no estan de acuerdo ambos integrantes del intercambio en la longitud del bit se recibira un mensaje equivocado. A esto se le conoce como sincronizacion.
+
+Secuencia de Bit erronea: se obtiene al no tener una logitud de bit definida por ambos participantes causando que un mensaje sea interpretado incorrectamente.
+
+--Senalizacion NRZ--
+
+Familia de senalizacion NRZ
+
+NRZ represente el 1 como el nivel mas alto de voltaje y el 0 como el mas bajo.
+
+NRZL Se utiliza un voltaje negativo para representar un 1 y un voltaje positivo para el 0
+
+NRZI Codifica cada bit mediante transiciones de datos es decir si es 1 la senal cambia al ser un 0 se mantiene en el estado anterior
+
+     1_
+NRZ _| |_0
+
+     _   _0
+NRZL  |_|1
+
+        1 0    1
+        ___    _
+NRZI___|   |_ | |_
+    0 0     1    0
+
+
+--Senalizacion Manchester--
+
+Familia de codigos Manchester se caracteriza por hacer cambio de senal en mitad de tiempo de un bit.
+
+Manchester Representa el 1 como un cambio ascendente y el 0 como uno descendiente
+
+Manchester Diferencial La presencia de una transicion al principio de un periodo se codifica con un 0 y la ausencia con 1.
+
+--MODULACION--
+
+Se lo que queremos es codificar la secuncia de bits por senal continua tenemos 3 opciones a este le llamamos modulacion.
+
+ASK - Modulacion por desplazamiento en amplitud
+FSK - Modulacion por desplazamiento en frecuencia
+PSK - Modulacion por desplazamiento en fase
+
+--METODOS DE CODIFICACION--
+
+Es el proceso previo a la senalizacion que se encarga en mejorar las caracteristicas de los bits para su transmision.
+
+El sistema nos permite:
+
+Saber cuando empieza y termina una trama para ello se reserva un patron de bits unico es decir una secuencia de bits unica para designar el inicio y el fin del tramo
+
+Mejoran la sincronizacion entre emisor y receptor estas disenadas para tener varias transiciones de unos a ceros para garantizar la calidad de la sincronizacion.
+
+Limitar la energia efectivamente transmitida no se pueden enviar muchos bits a 1 seguidos, previniendo el sobrecalentamiento de los medios 
+
+Mejora la deteccion de errores Si se detectan varios bits a 1 el sistema interpreta que hay un error porque el codigo no permitira secuencias de este tipo
+
+Ayuda a distinguir los bits de datos de los bits de control porque utiliza tres tipos de simbolos de datos de control y erroneos
+
+--CAPACIDAD DE UN CANAL--
+
+En la capa fisica nos encontramos con que debemos optimizar al maximo el tamano y la forma en la que se envian los bits debido a que no solo tiene que contener la informacion de control pero ademas la informacion del mensaje a enviar.
+
+Para medir la capacidad de un canal se utilizan las siguientes medidas
+
+Ancho de banda: es la capacidad de un medio para transportar bits, depende de las capacidades fisicas del medio.
+
+Rendimiento: es lo que debemos tener en consideracion en caso de redes compartidas en las que el ancho de banda se ve afectado por la cantidad de clientes conectados.
+
+Capacidad de transferencia util: Debemos tomar en consideracion ademas toda la informacion necesaria que debe ser enviada ademas del mensaje del usuario ya que esto tambien ocupa espacion en nuestra red.
+
+--MEDIOS DE TRANSMISION--
+
+COBRE
+
+Cable Coaxial: es utilzado por la tomas de las antenas de TV 
+UTP-8: hilos trenzados en 4 pares codificados por color RJ45
+STP: Se utiliza en instalacion con mucha interferencia electromagnetica 2 cables trenzados con recubierta metalica.
+
+FIBRA OPTICA
+
+Fibra Multimodo: tiene nucleos gruesos que permiten que la luz rebote a lo largo de la fibra en distintos angulos, por lo que tiene mayor dispersion y menos ancho de banda.
+Fibra Monomodo: mucho mas fino permite que la luz viaje de forma directa que permite un mayor ancho de banda.
+
+La fibra en definitiva es mucho mejor que el cobre dado que es menos suseptible a interferencias electromagneticas. Mas ancho de banda y distancia mas larga.
+
+--MEDIOS DE TRANSMICION INALAMBRICOS--
+
+Es un medio con muchas interferencias dado que viaje por el aire a lo que puede ser afectado por ondas moviles de microondas etc
+
+Usos:
+
+Redes de area local: para conectar dispositivos a un red local es necesaria un LAN local o WIFI
+Bluetooth: Se utiliza con moviles en la vecinidad, permite el acople de dispositivos para el traslado de informacion.
+Conexiones punto a punto: Se utiliza por ejemplo para conectar dos edificios dentro de un complejo de oficinas.
+Enlaces via satelite: Utilizan satelites a traves de antenas parabolicas
+Enlaces de comunicacion movil: Los sistemas concidos de transmision 5G 
+
