@@ -1,0 +1,62 @@
+Packet Tracer 3.9.1
+
+1. Qué información se enumera en los pasos numerados directamente debajo de los cuadros In Layers y Out Layers para Layer 7?
+
+Se indica la informacion referente al HTTP Request
+
+2. Cuál es el valor del Dst Port para Layer 4 en la columna Out Layers ?
+
+Port:80
+
+3. Cual es el Dest? IP para Layer 3 en la columna Out Layers?
+
+Dest IP: 192.168.1.254
+
+4. Qué información se muestra en Layer 2 en la columna Out Layers ?
+
+Se muestra la informacion correspondiente a la segunda capa que consta de la direccion fisica (MAC) de los dispositivos implicados en la comunicacion ademas de indicar la cabecera de Ethernet II.
+
+5. ¿Cuál es la información común que figura en la sección IP de los PDU Details en comparación con la información que figura en la pestaña del OSI Model ? ¿Con qué capa está asociado?
+
+Esta asociado con la capa 3 que nos indica la direccion IP del SOURCE y del DESTINATION
+
+6. Cuál es la información común que aparece en la sección TCP de PDU Details, en comparación con la información que aparece en la pestaña delOSI Model , y con qué capa está asociada?
+
+La informacion corresponde con la capa 4 que nos provee de los puertos del SOURCE y del DESTINATION.
+
+7. Cuál es el host que aparece en la sección HTTP de los PDU Details? ¿Con qué capa se asociaría esta información en la pestaña del MOdelo OSI?
+
+Nos indica que el host es Host:www.osi.local, esta informacion la asociamos con la capa 7 que es la que envia el HTTP request al servidor.
+
+8. Comparando la información que se muestra en la columnaIn Layers con la de la columna Out Layers, ¿cuáles son las principales diferencias?
+
+Podemos notar que la diferencia notable es el como indica la informacion en perpectiva de la columna en la que se encuentre. Vemos como cambian de lugar las ips, puertos y direccion fisicas dependiendo de la columna.
+
+9.  ¿Cuántas pestañas se muestran con este evento? Explique.
+
+Solo vemos dos pestanas OSI Model e Inbound PDU Details esto se debe a que este es el dispositivo receptor.
+
+10. Qué tipos de eventos adicionales se muestran?
+
+Se muestran eventos de tipo ARP, DNS y TCP.
+
+11. Qué información se indica en el campo NAME :en la sección de DNS QUERY?
+
+Se muestra la direccion del host al que se le envia la solicitud.
+
+12. En qué dispositivo se capturó la PDU?
+
+En el Web Client (Inbound)
+
+13. Cuál es el valor que aparece junto a ADDRESS: en la sección DNS ANSWER de Inbound PDU Details?
+
+Se nos indica la IP del Web Server IP 192.168.1.254
+
+14. En la lista numerada directamente debajo de In Layers y Out Layers, ¿cuál es la información que se muestra en los elementos 4 y 5?
+
+4 The TCP connection is successful.
+5 The device sets the connection state to ESTABLISHED
+
+15. ¿Cuál es el propósito de este evento, basado en la información proporcionada en el último elemento de la lista (debe ser el elemento 4)?
+
+El proposito de este envento es el finalizar la comunicacion y el cerrado de la conexion como podemos ver en el paso 4 que indica The device sets the connection state to CLOSED.
